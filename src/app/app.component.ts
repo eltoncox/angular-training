@@ -9,5 +9,8 @@ export class AppComponent {
   title = 'Livro Angular';
 
   foto: string = 'favicon.ico';
+  msgAlerta(): void {
+    alert('Livro de JAVA !');
+  }
 
 }
