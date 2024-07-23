@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class ListaPessoaComponent {
 
-  pessoas: string | undefined;
+  pessoas: string [] = ['Buda', 'Olavo de Carvalho', 'Seneca','Martin Luther King', 'Malcolm X'];
 
   nome: string = "Pedro"
   listar() {
