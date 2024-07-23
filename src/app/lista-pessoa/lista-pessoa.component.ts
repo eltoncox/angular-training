@@ -9,6 +9,7 @@ export class ListaPessoaComponent {
 
   pessoas: string | undefined;
 
+  nome: string = "Pedro"
   listar() {
 
   }
