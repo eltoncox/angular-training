@@ -1,17 +1,25 @@
 import { Component } from '@angular/core';
+import { PessoaServiceService } from './pessoa-service.service';
 
 @Component({
   selector: 'app-lista-pessoa',
   templateUrl: './lista-pessoa.component.html',
-  styleUrls: ['./lista-pessoa.component.css']
+  styleUrls: ['./lista-pessoa.component.css'],
+  //providers:[PessoaServiceService]
 })
 export class ListaPessoaComponent {
 
-  pessoas: string [] = ['Buda', 'Olavo de Carvalho', 'Seneca','Martin Luther King', 'Malcolm X'];
+  pessoas: string[];
+  nome: string = "Renata";
 
-  nome: string = "Pedro"
-  listar() {
 
+  constructor(private service: PessoaServiceService) {
+    this.pessoas = this.service.getPessoas();
   }
 
+  enviarNome() {
+    this.service.setPessoa(this.nome);
+    //this.nome = "";
+    //this.pessoas = this.service.getPessoas();
+  }
 }

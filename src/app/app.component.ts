@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AlertaService } from './alerta.service';
 
 @Component({
   selector: 'app-root',
@@ -9,8 +10,12 @@ export class AppComponent {
   title = 'Livro Angular';
 
   foto: string = 'favicon.ico';
-  msgAlerta(): void {
-    alert('Livro de JAVA !');
+
+  constructor(private service: AlertaService) {}
+  enviarMsg(): void {
+    this.service.msgAlerta();
   }
 
 }
+
+
