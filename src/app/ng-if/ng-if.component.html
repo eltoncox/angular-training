@@ -8,3 +8,15 @@
 <div *ngIf="false">
   *ngIf falso
 </div>
+
+
+<button (click)="mostrar()">Exibir o nome da escola de treinamento</button>
+<br>
+<p *ngIf="getValor()">treinamento com a condicional *ngIf</p>
+
+<p *ngIf="cursos.length == 0 "> Não temos curso disponível</p>
+<p *ngIf="cursos.length  > 0 "> Agora temos curso cadastrado</p>
+<button (click)="addCurso()"> add novo curso</button>
+
+<p *ngIf="mostraNome"> Com uma variável</p>
+<p [hidden]="getValor">Parágrafo com hidden</p>
