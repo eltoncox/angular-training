@@ -16,6 +16,14 @@ export class AppComponent {
     this.service.msgAlerta();
   }
 
+  desenvolvimento: string [] = ['Angular 16', 'JavaScript', 'TypeScript', 'HTML', 'CSS', 'Java'];
+
+  valor!: string;
+
+  valorPassado(valorPassado: string) {
+    this.valor = valorPassado;
+  }
+
 }
 
 
